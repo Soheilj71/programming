@@ -1,0 +1,35 @@
+**Interactive File Opener Script**
+
+📌 Overview
+This script allows you to:
+Interactively select a folder by number (e.g., simulation_1, simulation_2, etc.).
+Automatically open files in that folder matching a defined pattern (e.g., Heatmap_lag*_full.png).
+(macOS only) Wait until the application closes before continuing.
+Repeat this process until you type done.
+It is designed for macOS and Linux, and can easily be customized for other purposes.
+
+🚀 Features
+Works on macOS (Darwin) and Linux (Ubuntu, Fedora, etc.).
+Supports wildcard patterns to match multiple files (e.g., *.png, *.pdf).
+Automatically sorts files in natural order (1, 2, 10 instead of 1, 10, 2).
+Interactive loop — process as many folders as you want until you type done.
+Hides errors if no files are found.
+(macOS) Waits until Preview or the chosen application is closed before moving to the next folder.
+
+🛠️ How It Works
+The script follows these steps:
+Prompt for folder number
+It asks the user to enter a number (e.g. 1) or type done to exit.
+Build folder path
+It combines the base directory and folder prefix (e.g. ./simulation_1).
+Check if folder exists
+If it does not exist, the script prints a warning and asks again.
+Find and sort files
+It searches for files matching a pattern (Heatmap_lag*_full.png) and sorts them in natural order.
+Open files
+On macOS: Uses open -a Preview to open all files in Preview.
+On Linux: Uses xdg-open to open each file in its default application.
+Wait for application (macOS only)
+It waits until the application is closed before continuing.
+Repeat or exit
+The loop repeats until you type done.
