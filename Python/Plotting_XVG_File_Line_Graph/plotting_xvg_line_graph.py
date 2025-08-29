@@ -1,5 +1,6 @@
 # Written by Soheil Jamali
 # Email: sjamali@uark.edu, soheil.jamali.dev@gmail.com
+# University of Arkansas, Fayetteville, AR, USA
 
 #Loading the libraries
 import numpy as np
