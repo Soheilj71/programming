@@ -26,4 +26,100 @@ Because of its non-trivial topology, it is frequently used to test sampling effi
 
 ## 📂 Repository Structure
 
+├── muller_potential.py           # Main script for computing and plotting the surface
 
+└── README.md
+
+
+---
+
+## ⚙️ Requirements
+
+This project requires only standard scientific Python libraries:
+
+```bash
+pip install numpy matplotlib
+```
+
+---
+
+## ▶️ How to Run
+
+Run the script directly:
+```python
+python muller_potential.py
+```
+The script will:
+
+- Compute the potential on a 2D grid
+
+- Generate a heatmap visualization
+
+- Overlay contour lines
+
+- Display the energy surface
+
+---
+
+## 📐 Computational Domain
+
+The potential is computed over:
+
+```python
+x ∈ [-1.5, 1.2]
+y ∈ [-1.0, 2.2]
+```
+
+The resolution can be adjusted inside the script:
+
+```python
+resolution = 400
+```
+
+Higher resolution produces smoother figures but increases computation time.
+
+---
+
+## 🎨 Visualization Details
+
+The figure includes:
+
+- Heatmap (energy surface)
+
+- Contour lines (constant energy levels)
+
+- Colorbar
+
+- Adjustable aspect ratio
+
+- Customizable figure dimensions
+
+To change figure size:
+```python
+fig, ax = plt.subplots(figsize=(10, 6))
+```
+
+To preserve physical scaling:
+```python
+ax.set_aspect("equal")
+```
+
+---
+
+## 📸 Example Output
+
+The output is a 2D energy landscape with multiple minima and transition pathways between them.
+
+---
+
+## 🧪 Why This Is Useful
+
+The Müller potential is frequently used in:
+
+- Testing enhanced sampling algorithms
+
+- Benchmarking diffusion models in molecular dynamics
+
+- Studying rare-event transitions
+
+Comparing free energy reconstruction methods
