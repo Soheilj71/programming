@@ -102,14 +102,14 @@ If Excel writing fails (missing packages), you get:
 
 # Troubleshooting
 ## No matches found
-    * Check spelling
-    * Try `--ignore-case`
-    * If using regex, make sure your regex is correct
+  * Check spelling
+  * Try `--ignore-case`
+  * If using regex, make sure your regex is correct
 
 ## Invalid regex pattern
 You entered a regex that Python cannot compile. Common mistakes:
-    * Unclosed parentheses: `(`
-    * Unescaped special characters
+  * Unclosed parentheses: `(`
+  * Unescaped special characters
 
 Try using a plain word first to confirm the tool works.
 
