@@ -50,26 +50,37 @@ pip install numpy MDAnalysis
 
 Python version: 3.8+
 ```
-🚀 How to Run
-Basic usage:
-python dihedrals.py -t topol.pdb -x traj.xtc
-Full example:
 
+# 🚀 How to Run
+
+Basic usage:
+```python
+python dihedrals.py -t topol.pdb -x traj.xtc
+```
+
+# Full example:
+
+```python
 python dihedrals.py \
     -t topol.pdb \
     -x traj.xtc \
     -o backbone_dihedrals.npz \
     --csv backbone_dihedrals.csv
+```
 
-🧾 Command Line Arguments
-Argument	Description
--t / --top	Topology file (required)
--x / --traj	Trajectory file (required)
--o / --out	Output NumPy filename (default: backbone_dihedrals.npz)
---csv	Output CSV filename (default: backbone_dihedrals.csv)
-📦 Output Files
-1️⃣ NumPy File (.npz)
+# 🧾 Command Line Arguments
+
+| Argument       | Description                                              |
+|-----------------|---------------------------------------------------------|
+| `-t` / `--top`  | Topology file (required)                                |
+| `-x` / `--traj`	| Trajectory file (required)                              |
+| `-o` / `--out`	| Output NumPy filename (default: backbone_dihedrals.npz) |
+| `--csv`	      | Output CSV filename (default: backbone_dihedrals.csv)   |
+
+# 📦 Output Files
+## 1️⃣ NumPy File (.npz)
 Load in Python:
+```python
 import numpy as np
 
 data = np.load("backbone_dihedrals.npz")
@@ -78,43 +89,58 @@ time = data["time"]
 phi = data["phi"]
 psi = data["psi"]
 omega = data["omega"]
+```
 Each array has shape:
+```python
 (number_of_frames,)
-2️⃣ CSV File
+```
+
+## 2️⃣ CSV File
 Columns:
+``` python
 time, phi_deg, psi_deg, omega_deg
+```
+
 You can open this directly in:
-Excel
-Origin
-MATLAB
-Python (pandas)
-Any plotting software
-📊 Example Use Cases
-Ramachandran plots (ϕ vs ψ)
-Conformational state analysis
-Transition detection
-Free energy surface reconstruction
-Machine learning feature extraction
-⚠️ Important Assumptions
+* Excel
+* Origin
+* MATLAB
+* Python (pandas)
+* Any plotting software
+
+# 📊 Example Use Cases
+* Ramachandran plots (`ϕ` vs `ψ`)
+* Conformational state analysis
+* Transition detection
+* Free energy surface reconstruction
+* Machine learning feature extraction
+
+# ⚠️ Important Assumptions
 The script assumes:
-Exactly one ALA residue exists in the system.
-Backbone atom names are:
-N
-CA
-C
-The alanine residue has neighbors on both sides (e.g., ACE–ALA–NME).
+1. Exactly one ALA residue exists in the system.
+2. Backbone atom names are:
+   * N
+   * CA
+   * C
+3. The alanine residue has neighbors on both sides (e.g., ACE–ALA–NME).
+  
 If your naming differs (CHARMM vs AMBER vs GROMACS variations), adjust the atom selection in the script.
-🧠 Why This Is Useful
+
+# 🧠 Why This Is Useful
 Backbone dihedral angles define peptide conformation.
+
 For alanine dipeptide, ϕ and ψ are commonly used to:
-Study conformational basins
-Build free energy surfaces
-Benchmark enhanced sampling methods
-Train generative models
-🛠 Troubleshooting
-❌ "Expected exactly 1 ALA residue"
+* Study conformational basins
+* Build free energy surfaces
+* Benchmark enhanced sampling methods
+* Train generative models
+
+# 🛠 Troubleshooting
+
+## ❌ "Expected exactly 1 ALA residue"
 Your topology may contain multiple alanines. Modify selection.
-❌ Atom not found
+
+## ❌ Atom not found
 Check atom naming in your topology:
-u.atoms.names
+`u.atoms.names`
 
