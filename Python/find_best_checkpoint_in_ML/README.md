@@ -86,7 +86,7 @@ This will:
 * create `best.ckpt`
 * print a sampling command
 
-Common Examples
+# Common Examples
 
 ## 1) Use validation loss instead of train loss
 ```bash
