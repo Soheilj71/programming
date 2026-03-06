@@ -110,6 +110,8 @@ ax.set_aspect("equal")
 
 The output is a 2D energy landscape with multiple minima and transition pathways between them.
 
+<img width="600" height="450" alt="muller_potential" src="https://github.com/user-attachments/assets/d629e669-68cd-4464-a00c-6dcb28206146" />
+
 ---
 
 ## 🧪 Why This Is Useful
