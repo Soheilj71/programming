@@ -105,7 +105,7 @@ V_clipped = np.clip(V, None, 200)
 # Step 3: Visualization
 # -------------------------------------------------------
 
-fig, ax = plt.subplots(figsize=(6, 6))
+fig, ax = plt.subplots(figsize=(8, 6))
 
 # Heatmap (continuous color representation of energy)
 im = ax.imshow(
