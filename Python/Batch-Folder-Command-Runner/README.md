@@ -130,7 +130,7 @@ runs/run3,1,0.85,logs/run3.stdout.txt,logs/run3.stderr.txt
 
 Columns:
 
-|Column------|Meaning------------------------------------|
+|Column      |Meaning                                    |
 |------------|-------------------------------------------|
 |folder	     | Folder where the command was executed     |
 |returncode	 | Exit status of the command (0 = success)  |
