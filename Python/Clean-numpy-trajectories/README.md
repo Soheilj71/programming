@@ -78,15 +78,19 @@ python traj_clean_slice.py --in input.npy --out cleaned.npy
 
 # Command-line arguments
 ## Required arguments
-`--in`
+### `--in`
+
 Path to the input `.npy` file.
 
-`--out`
+## `--out`
+
 Path to the output `.npy` file.
 
 ## Optional arguments
-`--max_items`
+### `--max_items`
+
 Keep only the first `N` items along axis 0.
+
 Default:
 ```bash
 0
@@ -102,7 +106,10 @@ Example:
 
 This keeps only the first 100 rows, trajectories, or items.
 
-`--step_start`
+---
+
+### `--step_start`
+
 Start index for slicing along axis 1.
 
 Default:
@@ -117,10 +124,14 @@ Example:
 
 This starts from step 10.
 
-```--step_stop```
+---
+
+### `--step_stop`
+
 Stop index for slicing along axis 1.
 
 Default:
+
 ```bash
 -1
 ```
@@ -135,10 +146,14 @@ Example:
 
 This stops before step 500.
 
-`--step_stride`
+---
+
+## `--step_stride`
 
 Stride for slicing along axis 1.
+
 Default:
+
 ```bash
 1
 ```
@@ -149,8 +164,12 @@ Example:
 
 This keeps every 5th step along axis 1.
 
-`--keep_every`
+----
+
+### `--keep_every`
+
 Randomly keep about `1 / keep_every` of items along axis 0.
+
 Default:
 ```bash
 1
@@ -158,13 +177,19 @@ Default:
 
 Meaning:
 *   `1` = no subsampling
+  
 Example:
+
 ```bash
 --keep_every 4
 ```
 
 This keeps about one quarter of the rows/items.
-`--seed`
+
+---
+
+### `--seed`
+
 Random seed for reproducible subsampling.
 Default:
 ```bash
@@ -181,7 +206,7 @@ Using the same seed gives the same random selection each time.
 # Examples
 ## 1. Clean a file by removing bad rows only
 ```bash
-python traj_clean_slice.py --in raw.npy --out cleaned.npy
+3/python traj_clean_slice.py --in raw.npy --out cleaned.npy
 ```
 
 This will:
