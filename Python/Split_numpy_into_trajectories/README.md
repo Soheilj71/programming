@@ -115,7 +115,7 @@ final.npy
 # Output
 After running the script, you will get:
 
-**1. Many individual `.npy` files**
+## **1. Many individual `.npy` files**
 For example:
 ```
 split_output/
@@ -127,49 +127,66 @@ split_output/
 
 Each file contains one smaller trajectory.
 
-**2. One combined `.npy` file**
+## **2. One combined `.npy` file**
 For example:
 ```
 final.npy
 ```
 This file contains all trajectories stacked together as one 2D NumPy array.
+
 Its shape will be:
+```python
 (num_trajectories, length_of_each_trajectory)
-Example
+```
+
+# Example
 Suppose your extracted 1D data has length:
+```python
 1000000
+```
 and you choose:
+
+```bash
 --num-trajectories 10000
+```
+
 Then each trajectory will have length:
+
+```python
 1000000 // 10000 = 100
+```
+
 So the final combined array will have shape:
+```python
 (10000, 100)
-Important note about leftover values
-If the total number of data points is not exactly divisible by the number of trajectories, the script removes the extra points at the end.
+```
+
+# Important note about leftover values
+If the total number of data points is **not exactly divisible** by the number of trajectories, the script removes the extra points at the end.
+
 Example:
-Total points = 100003
-Number of trajectories = 1000
-Length of each trajectory = 100
-Usable points = 100000
-The final 3 points are ignored.
+
+*    Total points = `100003`
+*    Number of trajectories = `1000`
+*    Length of each trajectory = `100`
+*    Usable points = `100000`
+
+The final `3` points are ignored.
+
 This is done to make sure all trajectories have the same length.
 Why this version is better than the original script
-Compared to the original code, this version:
-is easier to read
-is safer for general use
-includes error handling
-uses command-line arguments
-avoids reloading thousands of temporary files
-is more suitable for GitHub
-is documented for beginner users
-Example command
+
+# Example command
+```bash
 python split_npy_into_trajectories.py \
     --input final_one_array.npy \
     --output-dir my_split_arrays \
     --num-trajectories 5000 \
     --prefix traj \
     --save-combined all_trajectories.npy
+```
+
 This will create:
-individual files such as traj_0.npy, traj_1.npy, ...
-a combined file called all_trajectories.npy
+*    individual files such as `traj_0.npy`, `traj_1.npy`, ...
+*    a combined file called `all_trajectories.npy`
 
