@@ -62,7 +62,7 @@ python split_npy_into_trajectories.py \
 ```
 
 # Arguments
-*   **`--input`**
+###   `--input`
 
 Path to the input `.npy` file.
 
@@ -71,7 +71,7 @@ Example:
 --input final_one_array.npy
 ```
 
-*   **`--output-dir`**
+###   `--output-dir`
 
 Folder where individual trajectory files will be saved.
 Default:
@@ -79,7 +79,7 @@ Default:
 split_output
 ```
 
-*   **`--num-trajectories`**
+###   `--num-trajectories`
 
 Number of smaller trajectories to create.
 
@@ -88,7 +88,7 @@ Default:
 10000
 ```
 
-*   **`--prefix`**
+###  `--prefix`
 
 Prefix used for naming the individual output files.
 Default:
@@ -104,7 +104,7 @@ numpy_array_2.npy
 ...
 ```
 
-*   **`--save-combined`**
+###   **`--save-combined`**
 
 Filename for the final combined NumPy array.
 Default:
