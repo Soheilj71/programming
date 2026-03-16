@@ -92,12 +92,9 @@ results_backup_20260316_154210
 *   Bash
 
 *   Standard Unix tools such as:
-
-        *   cp
-
-        *   date
-
-        *   basename
+       *   cp
+       *   date
+       *   basename
 
 This script is suitable for Linux and macOS.
 
