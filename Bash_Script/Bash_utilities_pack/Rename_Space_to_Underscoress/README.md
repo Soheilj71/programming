@@ -46,13 +46,14 @@ The script uses:
 1.  `find` → locates files/folders with spaces
 2.  `-depth` → ensures safe renaming of nested directories
 3.  Bash string replacement:
-        ```bash
-        ${name// /_}
-        ```
-        
-        replaces all spaces with underscores
 
-4.  `mv` → renames the file/folder
+   ```bash
+   ${name// /_}
+   ```
+        
+ replaces all spaces with underscores
+
+5.  `mv` → renames the file/folder
 
 ---
 ## 📂 Example
