@@ -179,4 +179,5 @@ The script does not infer missing structural annotations
 The script assumes the input is intended to be a PDB-like fixed-column file
 
 ## Author
-This script was developed by Soheil Jamali as part of the PDB Standardization project. For questions, feedback, or contributions, please contact sjamali@uark.edu/soheil.jamali.dev@gmail.com
+This script was developed by Soheil Jamali. 
+For questions, feedback, or contributions, please contact sjamali@uark.edu and soheil.jamali.dev@gmail.com
