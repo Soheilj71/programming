@@ -164,6 +164,6 @@ Use this tool when:
 *   Backups are enabled by default (`.bak`)
 *   Use regex mode carefully for complex patterns
 
-##🤝 Contributing
+## 🤝 Contributing
 Feel free to submit issues or improvements.
 
