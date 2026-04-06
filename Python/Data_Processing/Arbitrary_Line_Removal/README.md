@@ -7,16 +7,16 @@ This utility is designed for scientific computing, data preprocessing, and repro
 
 ✨ Features
 
-*   Remove:
-        *   Individual lines → `1,5,10`
-        *   Ranges → `3-8`
-        *   Mixed selections → `1,3-5,10`
-
+- Remove:
+  - Individual lines → `1,5,10`
+  - Ranges → `3-8`
+  - Mixed selections → `1,3-5,10`
 *   Human-friendly 1-based indexing
 *   Memory-efficient (stream-based processing)
 *   Optional in-place editing
 *   Robust error handling
 *   Cross-platform (Linux, macOS, HPC environments)
+
 
 ## ⚙️ Usage
 
