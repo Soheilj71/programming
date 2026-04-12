@@ -84,7 +84,6 @@ while [[ $# -gt 0 ]]; do
     -N|--name)        NAME_PATTERN="${2:?}"; shift 2;;
     -h|--help)        usage; exit 0;;
     *) echo "Unknown option: $1" >&2; usage; exit 1;;
-  endesac || true
   esac || true
 done
 
